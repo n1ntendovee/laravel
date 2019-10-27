@@ -12,9 +12,13 @@
 */
 
 Route::get('/', function () {
-    return view('welcome', ['name' => 'n1n']);
+   return view('welcome', ['name' => 'n1n']);
 });
 
-Route::get('/contacts', function(){
-    return view('contacts');
-});
+// Route::get('/contacts', function(){
+    // return view('contacts');
+// });
+Route::get('/about', 'AppInfo@About');
+Route::get('/contact', 'AppInfo@Contacts');
+//Route::get('/license', 'GRL');
+
