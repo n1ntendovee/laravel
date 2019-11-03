@@ -7,8 +7,8 @@
     <title>@yield('title')</title>
 </head>
 <body style= "background-color = 'green'">
-<a href = '/about'About>
-<a href = '/contact' Contact >
+<a href = '/about'>About</a>
+<a href = '/contact'> Contact </a>
     
 </body>
 </html>

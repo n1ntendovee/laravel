@@ -22,3 +22,7 @@ Route::get('/about', 'AppInfo@About');
 Route::get('/contact', 'AppInfo@Contacts');
 //Route::get('/license', 'GRL');
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
