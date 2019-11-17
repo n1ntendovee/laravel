@@ -11,18 +11,25 @@ class ModifyUsersAddAvatar extends Migration
      *
      * @return void
      */
-    public function up()
-    {
+    public function up(){
         //
+        Schema::table('users', function (Blueprint $table){
+            $table->string('avatar')->nullable();
+        });
+
     }
+
 
     /**
      * Reverse the migrations.
      *
      * @return void
      */
-    public function down()
-    {
-        //
+    public function down(){
+        Schema::table('users', function (Blueprint $table){
+            $stable->dropClolumn('avatar')->nullable();
+            
+        });
     }
+
 }

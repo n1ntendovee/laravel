@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>@yield('title')</title>
 </head>
-<body style= "background-color = 'green'">
+<body style= background-color = 'green'>
 <a href = '/about'>About</a>
 <a href = '/contact'> Contact </a>
     
