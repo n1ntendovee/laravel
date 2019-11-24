@@ -15,8 +15,8 @@ class ImagesController extends Controller
      */
     public function index()
     {
-        $images = DB::tables('images')-> get();
-        return view( 'images.list', ['imgs' => $images] );
+        $images = DB::table('images')-> get();
+        return view('list', ['imgs' => $images] );
     }
 
     /**
