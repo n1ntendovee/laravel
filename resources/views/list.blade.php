@@ -1,17 +1,33 @@
-@extends("layouts.app")
-<h1>image list</h1>
+<h1>Image list</h1>
 
 <style>
-    table, td {
-        border:1px, solid, gray; border-collap  se: collapse;
+    table, td{
+        border: 1px solid gray; border-collapse:collapse;
     }
-    table {width:80%}
+    table {width: 100%;}
 </style>
-@foreach ( $imgs as $i)
+<table>
+@foreach ($imgs as $i)
     <tr>
-        <td> {{$i->id}} [[E]]</td>
-        <td> {{$i->url}} <br> {{$i->filename}} <br> {{$i->alt}}</td>
-        <td> <img style="width:50 px" src="{{$i->url}}" alt=""></td>
-        <td>[[X]]</td>
+        <td>
+            @component('btn_edit')
+            @endcomponent
+        </td>
+        <td>
+            <a href= "/image-manager/{{$i->id}}">{{$i->url}}</a> <br>
+            {{$i->filename}} <br>
+            {{$i->alt}}
+        </td>
+        <td><img style="width:50px;" src="{{$i->url}}" alt=""></td>
+        <td>
+            <form action ="/image-manager/{{$i->id}}" method="POST">
+            @method('DELETE')
+            @csrf
+                <button type="submit">
+                    [[ x ]]
+                </button>
+            </form>
+        </td>
     </tr>
-@endforeach
+    @endforeach
+</table>
