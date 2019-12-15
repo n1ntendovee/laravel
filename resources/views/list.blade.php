@@ -1,4 +1,6 @@
 <h1>Image list</h1>
+<a href="/image-manager/create">[[CREATE]]</a>
+<form action=""></form>
 
 <style>
     table, td{

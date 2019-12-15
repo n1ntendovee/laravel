@@ -16,4 +16,5 @@
     </label>
     <input type="file" name="im_file" id="im_file">
     <br>
+    <input type="submit">
 </form>
