@@ -39,7 +39,12 @@ class ImagesController extends Controller
     public function store(Request $request)
     {
         //
+        $title = $request-> input('im_title');
+        $alt = $request-> input('im_alt');  
+        $file = $request-> inut('im_file');
+        DB::table('images' -> insertGetId([]));
         return redirect('/image-manager');
+
     }
 
     /**
